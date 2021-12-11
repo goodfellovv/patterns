@@ -3,9 +3,10 @@ package adapter;
 import parcers.JSONParser;
 import parcers.Parcer;
 
-public class JSONAdapter extends JSONParser implements Parcer {
+public class JSONAdapter implements Parcer {
+    private final JSONParser jsonParser = new JSONParser();
     @Override
     public String parse() {
-        return super.parse();
+        return jsonParser.parse();
     }
 }
