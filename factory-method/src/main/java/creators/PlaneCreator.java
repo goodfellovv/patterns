@@ -7,6 +7,7 @@ public class PlaneCreator extends Creator {
     @Override
     public Vehicle createVehicle() {
         System.out.println("Create Plane");
+        printCountrySuplier("Plane", "USA");
         return new Plane();
     }
 }
