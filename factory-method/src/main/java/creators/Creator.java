@@ -2,6 +2,6 @@ package creators;
 
 import vehicles.Vehicle;
 
-public interface Creator {
-    Vehicle createVehicle();
+public abstract class Creator {
+    public abstract Vehicle createVehicle();
 }
