@@ -32,5 +32,9 @@ public class Main {
         subject.updateAndNotify("8888");
         observers.forEach(Observer::print);
         System.out.println("******************************************\n");
+
+        System.out.println("******************Stop*******************");
+        observers.forEach(subject::unregister);
+        System.out.println("******************************************\n");
     }
 }
