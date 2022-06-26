@@ -1,26 +1,26 @@
 import strategies.CardPayment;
 import strategies.CashPayment;
-import strategies.PayPalPayment;
+import strategies.OnlinePayment;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("********** Order 1 **********");
-        Order order1 = new Order();
-        order1.setPaymentStrategy(new CardPayment());
-        order1.processOrder(100);
-        System.out.println("********** Order 1 **********\n");
+        System.out.println("********** Bill part 1 [by card] **********");
+        Bill order1 = new Bill();
+        order1.setPayment(new CardPayment());
+        order1.pay(100);
+        System.out.println("********** Bill part 2 [by card] **********\n");
 
-        System.out.println("********** Order 2 **********");
-        Order order2 = new Order();
-        order2.setPaymentStrategy(new PayPalPayment());
-        order2.processOrder(500);
-        System.out.println("********** Order 1 **********\n");
+        System.out.println("********** Bill part 2 [online] **********");
+        Bill order2 = new Bill();
+        order2.setPayment(new OnlinePayment());
+        order2.pay(500);
+        System.out.println("********** Bill part 3 [online] **********\n");
 
-        System.out.println("********** Order 3 **********");
-        Order order3 = new Order();
-        order3.setPaymentStrategy(new CashPayment());
-        order3.processOrder(1000);
-        System.out.println("********** Order 3 **********\n");
+        System.out.println("********** Bill part 3 [by cash] **********");
+        Bill order3 = new Bill();
+        order3.setPayment(new CashPayment());
+        order3.pay(1000);
+        System.out.println("********** Bill part 3 [by cash] **********\n");
 
     }
 }

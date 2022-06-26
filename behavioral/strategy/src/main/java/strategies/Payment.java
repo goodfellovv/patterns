@@ -1,5 +1,5 @@
 package strategies;
 
-public interface PaymentStrategy {
+public interface Payment {
     void pay();
 }
