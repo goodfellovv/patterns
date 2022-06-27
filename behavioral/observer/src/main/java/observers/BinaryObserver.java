@@ -1,7 +1,7 @@
 package observers;
 
 public class BinaryObserver implements Observer {
-    protected String data;
+    private String data;
 
     public BinaryObserver(String data) {
         System.out.println("Initial binary data: " + data);

@@ -1,7 +1,7 @@
 package observers;
 
 public class OctalObserver implements Observer {
-    protected String data;
+    private String data;
 
     public OctalObserver(String data) {
         System.out.println("Initial octal data: " + data);

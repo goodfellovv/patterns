@@ -8,7 +8,7 @@ import java.util.List;
 public class SubjectImpl implements Subject {
 
     protected List<Observer> observers;
-    protected String data;
+    private String data;
 
     public SubjectImpl() {
         this.observers = new ArrayList<>();

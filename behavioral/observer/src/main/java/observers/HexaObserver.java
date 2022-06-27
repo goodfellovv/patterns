@@ -1,7 +1,7 @@
 package observers;
 
 public class HexaObserver implements Observer {
-    protected String data;
+    private String data;
 
     public HexaObserver(String data) {
         System.out.println("Initial hex data: " + data);
