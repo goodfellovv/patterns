@@ -1,13 +1,16 @@
 package creators;
 
-import vehicles.Car;
-import vehicles.Vehicle;
+import cars.Car;
+import cars.Car.CarType;
 
-public class CarCreator extends Creator {
-    @Override
-    public Vehicle createVehicle() {
-        System.out.println("Create Car");
-        printCountrySuplier("Car", "Germany");
-        return new Car();
+public abstract class CarCreator {
+    public Car assembleCar(CarType type) {
+        Car car = createCar(type);
+        car.setCarcase();
+        car.setEngine();
+        car.paint();
+        return car;
     }
+
+    protected abstract Car createCar(CarType type);
 }

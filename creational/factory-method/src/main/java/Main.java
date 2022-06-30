@@ -1,29 +1,25 @@
+import cars.Car;
+import cars.Car.CarType;
 import creators.CarCreator;
-import creators.Creator;
-import creators.PlaneCreator;
-import creators.SubmarineCreator;
-import vehicles.Vehicle;
+import creators.KiaCarCreator;
+import creators.MercedesCarCreator;
+import creators.ToyotaCarCreator;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("**********************************");
-
-        Creator creator = new CarCreator();
-        useVehicle(creator.createVehicle());
-
-        System.out.println("**********************************");
-
-        creator = new PlaneCreator();
-        useVehicle(creator.createVehicle());
-
-        System.out.println("**********************************");
-
-        creator = new SubmarineCreator();
-        useVehicle(creator.createVehicle());
+        createAndPrintCarInfo(new ToyotaCarCreator(), CarType.SEDAN);
+        createAndPrintCarInfo(new ToyotaCarCreator(), CarType.SUV);
+        createAndPrintCarInfo(new MercedesCarCreator(), CarType.SEDAN);
+        createAndPrintCarInfo(new MercedesCarCreator(), CarType.SUV);
+        createAndPrintCarInfo(new KiaCarCreator(), CarType.SEDAN);
+        createAndPrintCarInfo(new KiaCarCreator(), CarType.SUV);
     }
 
-    private static void useVehicle(Vehicle vehicle){
-        vehicle.startEngine();
-        vehicle.go();
+    public static void createAndPrintCarInfo(CarCreator creator, CarType type){
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+        Car car = creator.assembleCar(type);
+        System.out.println("________________________________________");
+        car.getInfo();
+        System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
     }
 }
