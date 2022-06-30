@@ -9,7 +9,6 @@ public class DataSourceDecorator implements DataSource {
         this.source = source;
     }
 
-
     @Override
     public void writeData(String data) {
         System.out.println("Base decorator writes data: " + data);
