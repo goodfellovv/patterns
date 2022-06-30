@@ -1,7 +1,10 @@
 package factories;
 
-import products.Product;
+import products_a.ProductA;
+import products_b.ProductB;
 
 public interface AbstractFactory {
-    Product createProduct();
+    ProductA createProductA();
+    ProductB createProductB();
+
 }

@@ -1,14 +1,20 @@
 import factories.AbstractFactory;
-import products.Product;
+import products_a.ProductA;
+import products_b.ProductB;
 
 public class Application {
-    private final Product product;
+    private final ProductB productB;
+    private final ProductA productA;
 
     public Application(AbstractFactory factory) {
-        product = factory.createProduct();
+        productB = factory.createProductB();
+        productA = factory.createProductA();
     }
 
-    public Product getProduct() {
-        return this.product;
+    public ProductA getProductA() {
+        return this.productA;
+    }
+    public ProductB getProductB() {
+        return this.productB;
     }
 }
