@@ -8,11 +8,11 @@ public class ThreadSaveSingleton {
     }
 
     public static ThreadSaveSingleton getInstance(String value) {
-        synchronized(ThreadSaveSingleton.class){
-            if (instance == null) {
+        if (instance == null) {
+            synchronized(ThreadSaveSingleton.class){
                 instance = new ThreadSaveSingleton(value);
             }
-            return instance;
         }
+        return instance;
     }
 }
