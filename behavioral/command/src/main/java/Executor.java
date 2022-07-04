@@ -1,8 +1,6 @@
 import commands.Command;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Executor {
     List<Command> commands;
@@ -11,12 +9,13 @@ public class Executor {
         this.commands = commands;
     }
 
-    public void execute(int index){
-        if(commands.size() >= index){
+    public void execute(int index) {
+        if (commands.size() >= index) {
             commands.get(0).execute();
         }
     }
-    public void executeAll(){
+
+    public void executeAll() {
         commands.forEach(Command::execute);
     }
 
@@ -25,7 +24,7 @@ public class Executor {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("Commands:");
         stringBuilder.append("\n");
-        for(int i = 0; i < commands.size(); i++){
+        for (int i = 0; i < commands.size(); i++) {
             stringBuilder.append("[");
             stringBuilder.append(commands.get(i).getCommandName());
             stringBuilder.append(":");
@@ -33,6 +32,6 @@ public class Executor {
             stringBuilder.append("]");
             stringBuilder.append("\n");
         }
-        return  stringBuilder.toString();
+        return stringBuilder.toString();
     }
 }

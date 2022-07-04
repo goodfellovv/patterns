@@ -19,7 +19,7 @@ public class Main {
 
     }
 
-    public static List<Command> initCommands(){
+    public static List<Command> initCommands() {
         List<Command> commandList = new ArrayList<>();
         commandList.add(new CmdCommand("cd C://dabramov"));
         commandList.add(new CmdCommand("dir"));
