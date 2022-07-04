@@ -11,4 +11,9 @@ public class CmdCommand implements Command {
     public void execute() {
         System.out.println("Execute CMD command: " + command);
     }
+
+    @Override
+    public String getCommandName() {
+        return "Bash command";
+    }
 }

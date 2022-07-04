@@ -11,4 +11,9 @@ public class ShellCommand implements Command {
     public void execute() {
         System.out.println("Execute SH command: " + command);
     }
+
+    @Override
+    public String getCommandName() {
+        return "Shell command";
+    }
 }
