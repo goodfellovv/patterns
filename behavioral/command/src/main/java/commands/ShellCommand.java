@@ -9,7 +9,7 @@ public class ShellCommand implements Command {
 
     @Override
     public void execute() {
-        System.out.println("Execute SH command: " + command);
+        System.out.println("Execute Shell command: " + command);
     }
 
     @Override

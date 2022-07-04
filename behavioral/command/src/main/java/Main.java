@@ -1,4 +1,4 @@
-import commands.CmdCommand;
+import commands.BashCommand;
 import commands.Command;
 import commands.ShellCommand;
 
@@ -21,9 +21,9 @@ public class Main {
 
     public static List<Command> initCommands() {
         List<Command> commandList = new ArrayList<>();
-        commandList.add(new CmdCommand("cd C://dabramov"));
-        commandList.add(new CmdCommand("dir"));
-        commandList.add(new CmdCommand("cls"));
+        commandList.add(new BashCommand("cd C://dabramov"));
+        commandList.add(new BashCommand("dir"));
+        commandList.add(new BashCommand("cls"));
         commandList.add(new ShellCommand("cd /home/dabramov"));
         commandList.add(new ShellCommand("ls"));
         commandList.add(new ShellCommand("clear"));

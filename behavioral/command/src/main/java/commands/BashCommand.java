@@ -1,15 +1,15 @@
 package commands;
 
-public class CmdCommand implements Command {
+public class BashCommand implements Command {
     String command;
 
-    public CmdCommand(String command) {
+    public BashCommand(String command) {
         this.command = command;
     }
 
     @Override
     public void execute() {
-        System.out.println("Execute CMD command: " + command);
+        System.out.println("Execute Bash command: " + command);
     }
 
     @Override
