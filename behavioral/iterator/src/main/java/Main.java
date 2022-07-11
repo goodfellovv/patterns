@@ -1,5 +1,4 @@
-import document.Document;
-import iterator.Iterator;
+import iterator.PageIterator;
 import pages.ExcelPage;
 import pages.Page;
 import pages.WordPage;
@@ -9,17 +8,15 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Document excel = new Document(getExcelPages());
-        Document word = new Document(getWordPages());
-        Iterator excelIterator = excel.getIterator();
-        Iterator wordIterator = word.getIterator();
+        PageIterator excelIterator = new PageIterator(getExcelPages());
+        PageIterator wordIterator = new PageIterator(getWordPages());
         System.out.println("============Excel iterator=========");
-        while (excelIterator.hasNext()){
+        while (excelIterator.hasNext()) {
             System.out.println(excelIterator.getNext().toString());
         }
         System.out.println("===================================");
         System.out.println("============Word iterator=========");
-        while (wordIterator.hasNext()){
+        while (wordIterator.hasNext()) {
             System.out.println(wordIterator.getNext().toString());
         }
         System.out.println("==================================");

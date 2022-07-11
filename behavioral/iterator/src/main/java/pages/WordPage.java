@@ -1,7 +1,5 @@
 package pages;
 
-import iterator.Iterator;
-
 public class WordPage implements Page {
     String content;
 

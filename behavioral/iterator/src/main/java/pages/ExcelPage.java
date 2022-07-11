@@ -1,7 +1,5 @@
 package pages;
 
-import iterator.Iterator;
-
 public class ExcelPage implements Page {
     String content;
 
