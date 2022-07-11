@@ -19,7 +19,7 @@ public class Main {
     static class ThreadSimpleSingleton_1 implements Runnable {
         @Override
         public void run() {
-            SimpleSingleton singleton = SimpleSingleton.getInstance("SimpleSingleton_1");
+            SimpleSingleton singleton = SimpleSingleton.getInstance();
             System.out.println(singleton.value);
         }
     }
@@ -27,7 +27,7 @@ public class Main {
     static class ThreadSimpleSingleton_2 implements Runnable {
         @Override
         public void run() {
-            SimpleSingleton singleton = SimpleSingleton.getInstance("SimpleSingleton_2");
+            SimpleSingleton singleton = SimpleSingleton.getInstance();
             System.out.println(singleton.value);
         }
     }
@@ -35,7 +35,7 @@ public class Main {
     static class ThreadSaveSingleton_1 implements Runnable {
         @Override
         public void run() {
-            ThreadSaveSingleton singleton = ThreadSaveSingleton.getInstance("ThreadSaveSingleton_1");
+            ThreadSaveSingleton singleton = ThreadSaveSingleton.getInstance();
             System.out.println(singleton.value);
         }
     }
@@ -43,7 +43,7 @@ public class Main {
     static class ThreadSaveSingleton_2 implements Runnable {
         @Override
         public void run() {
-            ThreadSaveSingleton singleton = ThreadSaveSingleton.getInstance("ThreadSaveSingleton_2");
+            ThreadSaveSingleton singleton = ThreadSaveSingleton.getInstance();
             System.out.println(singleton.value);
         }
     }
@@ -52,7 +52,7 @@ public class Main {
         @Override
         public void run() {
             SingletonEnum singleton = SingletonEnum.INSTANCE;
-            System.out.println(singleton.value);
+            System.out.println(singleton.getValue());
         }
     }
 
@@ -60,7 +60,7 @@ public class Main {
         @Override
         public void run() {
             SingletonEnum singleton = SingletonEnum.INSTANCE;
-            System.out.println(singleton.value);
+            System.out.println(singleton.getValue());
         }
     }
 }

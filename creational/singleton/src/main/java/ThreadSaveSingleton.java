@@ -1,16 +1,18 @@
+import java.util.Date;
+
 public class ThreadSaveSingleton {
     private static volatile ThreadSaveSingleton instance;
 
     public String value;
 
-    private ThreadSaveSingleton(String value){
-        this.value = value;
+    private ThreadSaveSingleton(){
+        this.value = "ThreadSaveSingleton: " + new Date();
     }
 
-    public static ThreadSaveSingleton getInstance(String value) {
+    public static ThreadSaveSingleton getInstance() {
         if (instance == null) {
             synchronized(ThreadSaveSingleton.class){
-                instance = new ThreadSaveSingleton(value);
+                instance = new ThreadSaveSingleton();
             }
         }
         return instance;
