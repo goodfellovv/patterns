@@ -10,24 +10,24 @@ public class Phone {
         this.state = new OffState(this);
     }
 
+    public String lock(){
+        return state.onOffOn();
+    }
+
+    public String home(){
+        return state.onHome();
+    }
+    public String unlock(){
+        return state.onOffOn();
+    }
+    public String turnOn(){
+        return state.onOffOn();
+    }
     public void setState(State state){
         this.state = state;
     }
 
     public State getState() {
         return state;
-    }
-
-    public String lock(){
-        return "Locking phone and turn off the screen";
-    }
-    public String home(){
-        return "Going to home-screen";
-    }
-    public String unlock(){
-        return "Unlocking the phone to home screen";
-    }
-    public String turnOn(){
-        return "Turning screen on, device still locked";
     }
 }

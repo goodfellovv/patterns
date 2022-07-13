@@ -2,20 +2,19 @@ package state;
 
 import context.Phone;
 
-public class OffState extends State {
-    public OffState(Phone phone) {
+public class UnlockedState extends State {
+    public UnlockedState(Phone phone) {
         super(phone);
     }
 
     @Override
     public String onHome() {
-        phone.setState(new LockedState(phone));
-        return "[NO ACTION]";
+        return "Main screen";
     }
 
     @Override
     public String onOffOn() {
         phone.setState(new LockedState(phone));
-        return "Screen is on, but locked";
+        return "Screen locked";
     }
 }

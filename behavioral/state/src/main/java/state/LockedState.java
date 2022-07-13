@@ -9,13 +9,12 @@ public class LockedState extends State {
 
     @Override
     public String onHome() {
-        phone.setState(new ReadyState(phone));
-        return phone.unlock();
+        return "[NO ACTION]";
     }
 
     @Override
     public String onOffOn() {
-        phone.setState(new OffState(phone));
-        return phone.lock();
+        phone.setState(new UnlockedState(phone));
+        return "Screen unlocked";
     }
 }
