@@ -2,7 +2,7 @@ package vehicle;
 
 import engines.Engine;
 
-public class Track extends Vehicle{
+public class Track extends Vehicle {
 
     public Track(Engine engine) {
         super(engine);
